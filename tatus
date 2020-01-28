@@ -1,0 +1,35 @@
+[33mcommit 06287a1c152b1ca46381ad842e2f461a9836ed24[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: joebrenny <brejosj@dunwoody.edu>
+Date:   Wed Jan 22 14:34:34 2020 -0600
+
+    checking the commits
+
+[33mcommit f7f34d26f739392d9c2dbb99e74dba85d190aed6[m
+Author: fulchr <cfulton@dunwoody.edu>
+Date:   Mon Jan 14 11:02:30 2019 -0600
+
+    adding project scafolding
+
+[33mcommit 82fe763c95a6a77522b2bc3a920233bd72ad3afb[m
+Author: Instructor Chris <cfulton@dunwoody.edu>
+Date:   Thu Jan 10 11:23:18 2019 -0600
+
+    Updated README with additional information
+
+[33mcommit 10e314856b1bc2758bb4c55eae834d6e07206735[m
+Author: Instructor Chris <cfulton@dunwoody.edu>
+Date:   Wed Jan 9 11:21:43 2019 -0600
+
+    Update README.md file with additional content
+
+[33mcommit c6cea082e842aa4eaadc5ea886752c34d445296b[m
+Author: Instructor Chris <cfulton@dunwoody.edu>
+Date:   Wed Jan 9 07:24:45 2019 -0600
+
+    Update Readme
+
+[33mcommit f4dafb596a06e121bea58ec03ed7f2da136b46a6[m
+Author: Instructor Chris <cfulton@dunwoody.edu>
+Date:   Tue Jan 8 08:40:19 2019 -0600
+
+    Initial commit
