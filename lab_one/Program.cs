@@ -37,23 +37,28 @@ namespace lab_one
             primingValue = Console.ReadLine();
             while(primingValue != EXIT)
             {
+                //reseting for next round
+                totalCorrect = 0;
+                inCorrect = 0;
                 //loop to out put questions 
-                for(x=0;x <= questions.Length; x++)
+                for (x = 0; x < questions.Length; x++)
                 {
                     Console.WriteLine(questions[x]);
                     //nested loop for options choices
-                    for(y=0; y <  4; y++)
+                    for (y = 0; y < 4; y++)
                     {
                         Console.WriteLine(optionChoices[x,y]);
                     }//end for loop for awnsers
                     Console.WriteLine("Please Enter your awnser");
                     userSelection=Console.ReadLine();
+                    //decision making logic to determine if they got the question correct or not 
+                    Console.Clear();
                         
                 }//end questions loop
                 Console.WriteLine("To take Quiz again type ENTER of 2 to quit");
                 //reask the primer 
                 primingValue = Console.ReadLine();
-                    Console.Clear();
+                    
 
             }//end while loop 
         }//end of the main method
