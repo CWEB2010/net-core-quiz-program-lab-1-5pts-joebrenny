@@ -13,8 +13,8 @@ namespace lab_one
         String [] anwserKey = new String [10];  //empty array to store awnsers
         String userSelection;
         String [] questions ={"question one ","question Two","Question Three","Question Four","Question Five ","Question SIX","Question Seven","Question Eight","Question Nine","Question Ten"};
-        // muti dimensional array
-        string [, ] optionChoices  = {
+            // muti dimensional array
+            String[,] optionChoices = {
                                      {"A) jjjjjj","B)kkkkkkk","C)kkkkkkkk","D)lllllllll"},
                                      {"A) uuuuuuu","B)ooooooo","C)choice2","D)pppppppp"},
                                      {"A) jjj","B)ooo","C)cho","D)ppp"},
@@ -23,7 +23,8 @@ namespace lab_one
                                      {"A) jjjjjj","B)oooooo","C)choool","D)pppppl"},
                                      {"A) 88","B)88","C)88","D)88"},
                                      {"A) 99","B)99","C)99","D)99"},
-                                     {"A) 1010","B)1010","C)1010","D)1010"}
+                                     {"A) 1010","B)1010","C)1010","D)1010"},
+                                     {"A) ten","B) ten","C) ten","D)TEEEEN" }
                                     };
         string primingValue; //primer
         string EXIT = "2";
@@ -34,6 +35,27 @@ namespace lab_one
             Console.WriteLine("Welcome to this program that is a Quiz for .NETCORE. \n PLease Awnser the questions You need seven out of TEN to pass");
             Console.WriteLine("To get started please type start and press ENTER");
             primingValue = Console.ReadLine();
+            while(primingValue != EXIT)
+            {
+                //loop to out put questions 
+                for(x=0;x <= questions.Length; x++)
+                {
+                    Console.WriteLine(questions[x]);
+                    //nested loop for options choices
+                    for(y=0; y <  4; y++)
+                    {
+                        Console.WriteLine(optionChoices[x,y]);
+                    }//end for loop for awnsers
+                    Console.WriteLine("Please Enter your awnser");
+                    userSelection=Console.ReadLine();
+                        
+                }//end questions loop
+                Console.WriteLine("To take Quiz again type ENTER of 2 to quit");
+                //reask the primer 
+                primingValue = Console.ReadLine();
+                    Console.Clear();
+
+            }//end while loop 
         }//end of the main method
             
     }// class end
