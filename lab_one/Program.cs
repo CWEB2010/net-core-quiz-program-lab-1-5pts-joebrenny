@@ -37,9 +37,7 @@ namespace lab_one
             primingValue = Console.ReadLine();
             while(primingValue != EXIT)
             {
-                //reseting for next round
-                totalCorrect = 0;
-                inCorrect = 0;
+              
                 //loop to out put questions 
                 for (x = 0; x < questions.Length; x++)
                 {
@@ -51,9 +49,16 @@ namespace lab_one
                     }//end for loop for awnsers
                     Console.WriteLine("Please Enter your awnser");
                     userSelection=Console.ReadLine();
+                    userSelection.ToUpper();
                     //decision making logic to determine if they got the question correct or not 
                     Console.Clear();
-                        
+                   //reseting for next round
+                         totalCorrect = 0;
+                         inCorrect = 0;
+                    if(userSelection == answerkey[x])
+                    {
+                        totalCorrect++; //adding to correct 
+                    }
                 }//end questions loop
                 Console.WriteLine("To take Quiz again type ENTER of 2 to quit");
                 //reask the primer 
