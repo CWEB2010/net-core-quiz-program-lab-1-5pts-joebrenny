@@ -4,6 +4,10 @@ namespace lab_one
 {
     class Program
     {
+        
+
+
+
         static void Main(string[] args)
         {
         //need to delcare Variables and Intialize
@@ -35,11 +39,12 @@ namespace lab_one
             Console.WriteLine("Welcome to this program that is a Quiz for .NETCORE. \n PLease Awnser the questions You need seven out of TEN to pass");
             Console.WriteLine("To get started please type start and press ENTER");
             primingValue = Console.ReadLine();
+
             while(primingValue != EXIT)
             {
                //reseting for next round
-                         totalCorrect = 0;
-                         inCorrect = 0;
+                        totalCorrect = 0;
+                        inCorrect = 0;
                 //loop to out put questions 
                 for (x = 0; x < questions.Length; x++)
                 {
@@ -52,20 +57,24 @@ namespace lab_one
                     }//end for loop for awnsers
                     Console.WriteLine("Please Enter your awnser");
                     userSelection=Console.ReadLine();
-                    userSelection.ToUpper();
+                  
                     //decision making logic to determine if they got the question correct or not 
                     Console.Clear();
                   
-                    if (userSelection == answerkey[x])
+                    if (userSelection.ToUpper() == answerkey[x])
                     {
                         totalCorrect++; //adding to correct 
                     }
                     else inCorrect++;
-                    Console.WriteLine($"you have {totalCorrect} correct awnsers and got {inCorrect} Wrong");
+
+                
                 }//end questions loop
-                int precentage = totalCorrect / 10;
-                Console.WriteLine($"{precentage}%");
-                if (precentage > 70) { Console.WriteLine("you passed"); }
+                int POSSIABLEPOINT=10;
+                Console.WriteLine($"you have {totalCorrect} correct awnsers and got {inCorrect} Wrong");
+                double precentage = 00;
+                precentage =(totalCorrect / POSSIABLEPOINT );
+                Console.WriteLine($"{precentage}0%");
+                if (totalCorrect > 7) { Console.WriteLine("you passed"); }
                 else { Console.WriteLine("you failed try again "); }
 
                 Console.WriteLine("To take Quiz again type ENTER of 2 to quit");
