@@ -37,14 +37,17 @@ namespace lab_one
             primingValue = Console.ReadLine();
             while(primingValue != EXIT)
             {
-              
+               //reseting for next round
+                         totalCorrect = 0;
+                         inCorrect = 0;
                 //loop to out put questions 
                 for (x = 0; x < questions.Length; x++)
                 {
                     Console.WriteLine(questions[x]);
                     //nested loop for options choices
-                    for (y = 0; y < 4; y++)
+                    for (y = 0; y < 4; y++) //optionChoices.GetLength(y)
                     {
+                       
                         Console.WriteLine(optionChoices[x,y]);
                     }//end for loop for awnsers
                     Console.WriteLine("Please Enter your awnser");
@@ -52,14 +55,19 @@ namespace lab_one
                     userSelection.ToUpper();
                     //decision making logic to determine if they got the question correct or not 
                     Console.Clear();
-                   //reseting for next round
-                         totalCorrect = 0;
-                         inCorrect = 0;
-                    if(userSelection == answerkey[x])
+                  
+                    if (userSelection == answerkey[x])
                     {
                         totalCorrect++; //adding to correct 
                     }
+                    else inCorrect++;
+                    Console.WriteLine($"you have {totalCorrect} correct awnsers and got {inCorrect} Wrong");
                 }//end questions loop
+                int precentage = totalCorrect / 10;
+                Console.WriteLine($"{precentage}%");
+                if (precentage > 70) { Console.WriteLine("you passed"); }
+                else { Console.WriteLine("you failed try again "); }
+
                 Console.WriteLine("To take Quiz again type ENTER of 2 to quit");
                 //reask the primer 
                 primingValue = Console.ReadLine();
