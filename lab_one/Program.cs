@@ -14,9 +14,9 @@ namespace lab_one
         
         //DECLARATIONS 
         String [] answerkey = {"B","B","C","A","D","A","A","C","D","A"};
-        String [] anwserKey = new String [10];  //empty array to store awnsers
+        String [] anwserKey1 = new String [10];  //empty array to store awnsers
         String userSelection;
-        String [] questions ={"question one ","question Two","Question Three","Question Four","Question Five ","Question SIX","Question Seven","Question Eight","Question Nine","Question Ten"};
+        String [] questions ={"question one!!! ","question Two","Question Three","Question Four","Question Five ","Question SIX","Question Seven","Question Eight","Question Nine","Question Ten"};
             // muti dimensional array
             String[,] optionChoices = {
                                      {"A) jjjjjj","B)kkkkkkk","C)kkkkkkkk","D)lllllllll"},
@@ -33,18 +33,18 @@ namespace lab_one
         string primingValue; //primer
         string EXIT = "2";
         int x,y;  //looping vars
-        int totalCorrect, inCorrect; 
+        double totalCorrect, inCorrect; 
 
         //welcome message and instructions for the program and end user 
             Console.WriteLine("Welcome to this program that is a Quiz for .NETCORE. \n PLease Awnser the questions You need seven out of TEN to pass");
             Console.WriteLine("To get started please type start and press ENTER");
             primingValue = Console.ReadLine();
 
-            while(primingValue != EXIT)
+            while (primingValue != EXIT)
             {
-               //reseting for next round
-                        totalCorrect = 0;
-                        inCorrect = 0;
+                //reseting for next round
+                totalCorrect = 0;
+                inCorrect = 0;
                 //loop to out put questions 
                 for (x = 0; x < questions.Length; x++)
                 {
@@ -52,33 +52,37 @@ namespace lab_one
                     //nested loop for options choices
                     for (y = 0; y < 4; y++) //optionChoices.GetLength(y)
                     {
-                       
-                        Console.WriteLine(optionChoices[x,y]);
+
+                        Console.WriteLine(optionChoices[x, y]);
                     }//end for loop for awnsers
                     Console.WriteLine("Please Enter your awnser");
-                    userSelection=Console.ReadLine();
-                  
+                    userSelection = Console.ReadLine();
+
                     //decision making logic to determine if they got the question correct or not 
                     Console.Clear();
-                  
+
                     if (userSelection.ToUpper() == answerkey[x])
                     {
                         totalCorrect++; //adding to correct 
                     }
                     else inCorrect++;
 
-                
+                    Console.WriteLine($"you have {totalCorrect} correct awnsers and got {inCorrect} Wrong");
                 }//end questions loop
-                int POSSIABLEPOINT=10;
-                Console.WriteLine($"you have {totalCorrect} correct awnsers and got {inCorrect} Wrong");
-                double precentage = 00;
-                precentage =(totalCorrect / POSSIABLEPOINT );
-                Console.WriteLine($"{precentage}0%");
+                double POSSIABLEPOINT = 10;
+                //Console.WriteLine($"you have {totalCorrect} correct awnsers and got {inCorrect} Wrong");
+                //math to find out the % of the score 
+                double precentage = 0;
+                precentage = (100 * (totalCorrect / POSSIABLEPOINT));
+
+                Console.WriteLine($"{precentage}%");
                 if (totalCorrect > 7) { Console.WriteLine("you passed"); }
+                
                 else { Console.WriteLine("you failed try again "); }
 
-                Console.WriteLine("To take Quiz again type ENTER of 2 to quit");
                 //reask the primer 
+                Console.WriteLine("To take Quiz again type ENTER of 2 to quit");
+                
                 primingValue = Console.ReadLine();
                     
 
