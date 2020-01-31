@@ -16,15 +16,15 @@ namespace lab_one
         String [] answerkey = {"B","B","C","A","D","A","A","C","D","A"};
         String [] anwserKey1 = new String [10];  //empty array to store awnsers
         String userSelection;
-        String [] questions ={"question one!!! ","question Two","Question Three","Question Four","Question Five ","Question SIX","Question Seven","Question Eight","Question Nine","Question Ten"};
+        String [] questions ={"What Company maintains the .NETCORE? ","What platforms is it supported on ?","What version of .NETCORE ?","What year did .NETCORE release?","What does CTS stand for? ","WHen is .netcore project to be released?","Question Seven","Question Eight","Question Nine","Question Ten"};
             // muti dimensional array
             String[,] optionChoices = {
-                                     {"A) jjjjjj","B)kkkkkkk","C)kkkkkkkk","D)lllllllll"},
-                                     {"A) uuuuuuu","B)ooooooo","C)choice2","D)pppppppp"},
-                                     {"A) jjj","B)ooo","C)cho","D)ppp"},
-                                     {"A) jjjj","B)oooo","C)choo","D)pppp"},
-                                     {"A) jjjjj","B)ooooo","C)chooo","D)ppppp"},
-                                     {"A) jjjjjj","B)oooooo","C)choool","D)pppppl"},
+                                     {"A) AWS","B)Microsoft","C)Google","D)Apple"},
+                                     {"A) Linux","B)ALL A,B,C","C)Apple","D)Windows"},
+                                     {"A) 10.0","B)3.0","C)3.1 3.1","D)4.0"},
+                                     {"A) 2016","B)2001","C)1998","D)1994"},
+                                     {"A) Contextual Tools System","B)Console tools stem","C)cool type stuff","D)Common Type System"},
+                                     {"A) 2020","B)2021","C)2022","D)2023"},
                                      {"A) 88","B)88","C)88","D)88"},
                                      {"A) 99","B)99","C)99","D)99"},
                                      {"A) 1010","B)1010","C)1010","D)1010"},
@@ -36,8 +36,8 @@ namespace lab_one
         double totalCorrect, inCorrect; 
 
         //welcome message and instructions for the program and end user 
-            Console.WriteLine("Welcome to this program that is a Quiz for .NETCORE. \n PLease Awnser the questions You need seven out of TEN to pass");
-            Console.WriteLine("To get started please type start and press ENTER");
+            Console.WriteLine("Welcome to this program that is a Quiz for .NETCORE. \n PLease Awnser the questions \n You need seven out of TEN to pass");
+            Console.WriteLine("To get started please type start and press ENTER ");
             primingValue = Console.ReadLine();
 
             while (primingValue != EXIT)
@@ -50,7 +50,7 @@ namespace lab_one
                 {
                     Console.WriteLine(questions[x]);
                     //nested loop for options choices
-                    for (y = 0; y < 4; y++) //optionChoices.GetLength(y)
+                    for (y = 0; y < optionChoices.GetLength(1); y++) //optionChoices.GetLength(y)
                     {
 
                         Console.WriteLine(optionChoices[x, y]);
@@ -76,7 +76,7 @@ namespace lab_one
                 precentage = (100 * (totalCorrect / POSSIABLEPOINT));
 
                 Console.WriteLine($"{precentage}%");
-                if (totalCorrect > 7) { Console.WriteLine("you passed"); }
+                if (totalCorrect >= 7) { Console.WriteLine("you passed"); }
                 
                 else { Console.WriteLine("you failed try again "); }
 
