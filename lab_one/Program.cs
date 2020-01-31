@@ -4,10 +4,6 @@ namespace lab_one
 {
     class Program
     {
-        
-
-
-
         static void Main(string[] args)
         {
         //need to delcare Variables and Intialize
@@ -16,7 +12,7 @@ namespace lab_one
         String [] answerkey = {"B","B","C","A","D","A","A","C","D","A"};
         String [] anwserKey1 = new String [10];  //empty array to store awnsers
         String userSelection;
-        String [] questions ={"What Company maintains the .NETCORE? ","What platforms is it supported on ?","What version of .NETCORE ?","What year did .NETCORE release?","What does CTS stand for? ","WHen is .netcore project to be released?","Question Seven","Question Eight","Question Nine","Question Ten"};
+        String [] questions ={"What Company maintains the .NETCORE? ","What platforms is it supported on ?","What version of .NETCORE ?","What year did .NETCORE release?","What does CTS stand for? ","WHen is .netcore project to be released?","What is the commandline text to start the console build?","What other platforms does Microsoft make?","what is one thing that make the compliers special","What is the .NETCORE complier platform?"};
             // muti dimensional array
             String[,] optionChoices = {
                                      {"A) AWS","B)Microsoft","C)Google","D)Apple"},
@@ -25,10 +21,10 @@ namespace lab_one
                                      {"A) 2016","B)2001","C)1998","D)1994"},
                                      {"A) Contextual Tools System","B)Console tools stem","C)cool type stuff","D)Common Type System"},
                                      {"A) 2020","B)2021","C)2022","D)2023"},
-                                     {"A) 88","B)88","C)88","D)88"},
-                                     {"A) 99","B)99","C)99","D)99"},
-                                     {"A) 1010","B)1010","C)1010","D)1010"},
-                                     {"A) ten","B) ten","C) ten","D)TEEEEN" }
+                                     {"A) Dotnet new Console","B)console build","C).net console build","D)build console"},
+                                     {"A) asp.netcore","B).netcore","C)A B and D","D).netcore framework"},
+                                     {"A) they are acures","B)they are apple","C)they are amd","D)they are cross platform"},
+                                     {"A) Roslyn","B) crm","C) ten","D)TEEEEN4.0" }
                                     };
         string primingValue; //primer
         string EXIT = "2";
