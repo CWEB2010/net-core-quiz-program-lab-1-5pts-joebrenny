@@ -1,5 +1,6 @@
 # .NET Core Quiz Program (Lab 1 - 5pts.)
 
+Done: By Joe Brenny in C# for asvanced programing class at Dunwoody Tech College 
 You are going to build a quiz application that requires you to generate 10 questions along with 4 option choices for each question.  You will do some research on .NET Core and decide upon 10 questions that will assess the quiz taker's knowledge on .NET Core 
 
 ## Instructions
